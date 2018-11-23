@@ -10,7 +10,7 @@ class App extends Component {
     super();
     this.state = {
       winnerLine:'Let\'s play...!',
-      winner: undefined,
+      winner: null,
       turn: 'X',
       gameLocked: false,
       gameEnded: false,
@@ -97,6 +97,12 @@ class App extends Component {
       board: Array(9).fill(''),
       totalMoves: 0
     });
+
+    let boxes = document.querySelectorAll('.square');
+    
+    boxes.forEach((box) =>{
+     box.innerText = '';
+    })
   }
 
   render() {
