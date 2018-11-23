@@ -24,16 +24,16 @@ class App extends Component {
     
     if(this.state.gameEnded || this.state.gameLocked) return;
 
-    if(this.state.board[box.dataset.square] == '') {
+    if(this.state.board[box.dataset.square] === '') {
       this.state.board[box.dataset.square] = this.state.turn;
       box.innerText = this.state.turn;
       
-      if(box.innerText == 'O'){
+      if(box.innerText === 'O'){
        box.classList.add('AI-color');
       }
-      this.state.turn = this.state.turn == 'X' ? 'O' : 'X';
+      this.state.turn = this.state.turn === 'X' ? 'O' : 'X';
       
-      if(this.state.turn == 'X'){
+      if(this.state.turn === 'X'){
         this.setState({winnerLine:'Your Turn...!'});
       }else{
         this.setState({winnerLine:'AI is playing...!'})
@@ -44,19 +44,19 @@ class App extends Component {
 
     var result = this.checkWinner();
 
-    if(result == 'X') {
+    if(result === 'X') {
       this.state.gameEnded = true;
       this.setState({
         winner: 'X',
         winnerLine: 'X wins the game!'
       });
-    } else if(result == 'O') {
+    } else if(result === 'O') {
       this.state.gameEnded = true;
       this.setState({
         winner: 'O',
         winnerLine: 'O wins the game!'
       });
-    } else if(result == 'draw') {
+    } else if(result === 'draw') {
       this.state.gameEnded = true;
       this.setState({
         winner: 'draw',
@@ -64,12 +64,12 @@ class App extends Component {
       })
     }
     
-    if(this.state.turn == 'O' && !this.state.gameEnded) {
+    if(this.state.turn === 'O' && !this.state.gameEnded) {
       this.state.gameLocked = true;
       setTimeout(()=> {
         do {
           var random = Math.floor(Math.random()*9);
-        } while(this.state.board[random] != '');
+        } while(this.state.board[random] !== '');
         this.state.gameLocked = false;
         this.clicked(document.querySelectorAll('.square')[random]);
       }, 300);
@@ -80,12 +80,12 @@ class App extends Component {
     var moves = [[0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6], [0, 1, 2], [3, 4, 5], [6, 7, 8]];
     var board = this.state.board;
     for(let i=0;i<moves.length;i++) {
-      if(board[moves[i][0]] == board[moves[i][1]] && board[moves[i][1]] == board[moves[i][2]])
+      if(board[moves[i][0]] === board[moves[i][1]] && board[moves[i][1]] === board[moves[i][2]])
           return board[moves[i][0]];
     }
 
     console.log(this.state.totalMoves);
-    if(this.state.totalMoves == 9) {
+    if(this.state.totalMoves === 9) {
       return 'draw';
     }
   }
