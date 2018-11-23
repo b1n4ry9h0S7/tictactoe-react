@@ -28,6 +28,9 @@ class App extends Component {
       this.state.board[box.dataset.square] = this.state.turn;
       box.innerText = this.state.turn;
       
+      if(box.innerText == 'O'){
+       box.classList.add('AI-color');
+      }
       this.state.turn = this.state.turn == 'X' ? 'O' : 'X';
       
       if(this.state.turn == 'X'){
@@ -102,6 +105,7 @@ class App extends Component {
     
     boxes.forEach((box) =>{
      box.innerText = '';
+     box.classList.remove('AI-color');
     })
   }
 

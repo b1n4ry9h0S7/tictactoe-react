@@ -61,6 +61,10 @@
   border-radius: 5px;
 }
 
+.AI-color{
+  color: #74B9FF;
+}
+
 
 .square:nth-child(7),.square:nth-child(8),.square:nth-child(9) {
   border-bottom: 0;
