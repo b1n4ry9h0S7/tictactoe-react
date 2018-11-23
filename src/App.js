@@ -9,6 +9,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
+      winnerLine:'Let\'s play...!',
       winner: undefined,
     };
     this.gameState = {
@@ -20,7 +21,8 @@ class App extends Component {
     }
   }
 
-  clicked(box) {
+  clicked = (box) => {
+    
     if(this.gameState.gameEnded || this.gameState.gameLocked) return;
 
     if(this.gameState.board[box.dataset.square] == '') {
@@ -29,6 +31,11 @@ class App extends Component {
       
       this.gameState.turn = this.gameState.turn == 'X' ? 'O' : 'X';
       
+      if(this.gameState.turn == 'X'){
+        this.setState({winnerLine:'Your Turn...!'});
+      }else{
+        this.setState({winnerLine:'AI is playing...!'})
+      }
       this.gameState.totalMoves++;
     }
 
@@ -63,11 +70,11 @@ class App extends Component {
         } while(this.gameState.board[random] != '');
         this.gameState.gameLocked = false;
         this.clicked(document.querySelectorAll('.square')[random]);
-      }, 1000);
+      }, 300);
     }
   }
 
-  checkWinner() {
+  checkWinner = () => {
     var moves = [[0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6], [0, 1, 2], [3, 4, 5], [6, 7, 8]];
     var board = this.gameState.board;
     for(let i=0;i<moves.length;i++) {
@@ -85,10 +92,9 @@ class App extends Component {
     return (
       <div id="game">
           <div id="head">
-              Tic-Tac-Toe in React (AI) 
+              Tic-Tac-Toe
           </div>
-          <div id="status">{this.state.winnerLine}</div>
-          <div id="board" onClick={(e)=>this.clicked(e.target)}>
+          <div id="board" onClick={(e) => this.clicked(e.target)}>
               <div className="square" data-square="0"></div>
               <div className="square" data-square="1"></div>
               <div className="square" data-square="2"></div>
@@ -99,6 +105,8 @@ class App extends Component {
               <div className="square" data-square="7"></div>
               <div className="square" data-square="8"></div>
           </div>
+          <div id="status">{this.state.winnerLine}</div>
+          {this.gameState.gameEnded ? <button className="play-btn">Play Again</button> : ''}
       </div>      
     );
   }

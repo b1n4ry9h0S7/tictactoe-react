@@ -13,7 +13,7 @@
   flex-direction: column;
   background: #333945;
   color: #fff;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 #head {
@@ -39,7 +39,7 @@
   justify-content: center;
   align-items: center;
   font-size: 45px;
-
+  animation: glow 1s;
 }
 
 
@@ -49,6 +49,15 @@
   font-size: 2rem;
   font-style: italic;
   animation: glow 1s;
+}
+
+.play-btn{
+  padding: 0.5rem;
+  border: 1px solid #fff;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  background: #2B2B52;
+  color: #fff;
 }
 
 
