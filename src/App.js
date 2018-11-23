@@ -4,8 +4,6 @@ import './App.css';
 class App extends Component {
 // @TODO: 
 // Add 2 modes. Single player and multiplayer.
-// Improve design
-
   constructor() {
     super();
     this.state = {
