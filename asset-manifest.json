@@ -1,13 +1,13 @@
 {
-  "main.css": "/tictactoe-react/static/css/main.0726fda3.chunk.css",
-  "main.js": "/tictactoe-react/static/js/main.b59e83ae.chunk.js",
-  "main.js.map": "/tictactoe-react/static/js/main.b59e83ae.chunk.js.map",
+  "main.css": "/tictactoe-react/static/css/main.6f20ddb3.chunk.css",
+  "main.js": "/tictactoe-react/static/js/main.612e0c4f.chunk.js",
+  "main.js.map": "/tictactoe-react/static/js/main.612e0c4f.chunk.js.map",
   "static/js/1.f68dcc1a.chunk.js": "/tictactoe-react/static/js/1.f68dcc1a.chunk.js",
   "static/js/1.f68dcc1a.chunk.js.map": "/tictactoe-react/static/js/1.f68dcc1a.chunk.js.map",
   "runtime~main.js": "/tictactoe-react/static/js/runtime~main.fe3c2865.js",
   "runtime~main.js.map": "/tictactoe-react/static/js/runtime~main.fe3c2865.js.map",
-  "static/css/main.0726fda3.chunk.css.map": "/tictactoe-react/static/css/main.0726fda3.chunk.css.map",
+  "static/css/main.6f20ddb3.chunk.css.map": "/tictactoe-react/static/css/main.6f20ddb3.chunk.css.map",
   "index.html": "/tictactoe-react/index.html",
-  "precache-manifest.c5c6d940a4056be5c6679b49de55973e.js": "/tictactoe-react/precache-manifest.c5c6d940a4056be5c6679b49de55973e.js",
+  "precache-manifest.4f95682231f8da22e6eb01be2691456c.js": "/tictactoe-react/precache-manifest.4f95682231f8da22e6eb01be2691456c.js",
   "service-worker.js": "/tictactoe-react/service-worker.js"
 }
