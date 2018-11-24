@@ -56,16 +56,17 @@
   font-size: 2rem;
   animation: glow 1s;
   font-family: 'Chakra Petch', sans-serif;
+  font-weight: 500;
 }
 
 .play-btn{
-  padding: 0.5rem;
-  border: 1px solid #fff;
+  padding: 0.8rem;
+  /* border: 1px solid #fff; */
   font-size: 1.5rem;
   margin: 1rem 0;
-  background: #2B2B52;
+  background: #3498DB;
   color: #fff;
-  /* border-radius: 5px; */
+  border-radius: 10px;
 }
 
 .AI-color{
