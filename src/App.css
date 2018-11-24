@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+@import url('https://fonts.googleapis.com/css?family=Chakra+Petch|Slabo+27px');
 
 *  {
   margin: 0;
@@ -45,6 +46,7 @@
   font-size: 45px;
   animation: glow 1s;
   cursor: pointer;
+  font-family: 'Slabo 27px', serif;
 }
 
 
@@ -52,8 +54,8 @@
   margin: 1rem 0;
   height: 2rem;
   font-size: 2rem;
-  font-style: italic;
   animation: glow 1s;
+  font-family: 'Chakra Petch', sans-serif;
 }
 
 .play-btn{
@@ -136,4 +138,16 @@
   to{
     opacity: 1;
   }
+}
+
+#tic {
+color: coral;
+}
+
+#tac {
+color: royalblue;
+}
+
+#toe {
+color: yellowgreen;
 }
