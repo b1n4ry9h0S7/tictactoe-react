@@ -111,7 +111,7 @@ class App extends Component {
     return (
       <div id="game">
           <div id="head">
-              Tic-Tac-Toe
+              Tic-Tac-Toe in <span id="react">React</span>
           </div>
           <div id="board" onClick={(e) => this.clicked(e.target)}>
               <div className="square" data-square="0"></div>

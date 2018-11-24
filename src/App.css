@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+#react {
+  color: #74B9FF;
+}
+
 #game {
   display: flex;
   font-family: 'Titillium Web', sans-serif;
@@ -59,7 +63,7 @@
   margin: 1rem 0;
   background: #2B2B52;
   color: #fff;
-  border-radius: 5px;
+  /* border-radius: 5px; */
 }
 
 .AI-color{
@@ -80,7 +84,51 @@
   border-right: 0;
  }
 
+ .square:nth-child(1) {
 
+  border-radius: 0px 0px 5px 0px;
+
+ }
+ .square:nth-child(2) {
+
+  border-radius: 0px 0px 5px 5px;
+
+ }
+ .square:nth-child(3) {
+
+  border-radius: 0px 0px 0px 5px;
+
+ }
+ .square:nth-child(4) {
+
+  border-radius: 0px 5px 5px 0px;
+
+ }
+ .square:nth-child(5) {
+
+  border-radius: 5px 5px 5px 5px;
+
+ }
+ .square:nth-child(6) {
+
+  border-radius: 5px 0px 0px 5px;
+
+ }
+ .square:nth-child(7) {
+
+  border-radius: 0px 5px 0px 0px;
+
+ }
+ .square:nth-child(8) {
+
+  border-radius: 5px 5px 0px 0px;
+
+ }
+ .square:nth-child(9) {
+
+  border-radius: 5px 0px 0px 0px;
+
+ }
 @keyframes glow{
   from{
     opacity: 0;
